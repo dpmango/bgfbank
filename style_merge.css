@@ -194,6 +194,15 @@
   color: #28b377;
   transform: translateY(-20px);
 }
+.benefit-card__icon:not(.benefit-card__icon--circle){
+  min-height: 62px;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -ms-align-items: center;
+  align-items: center;
+}
+
 /* green line at the right */
 .benefit-card__icon::before{
   display: inline-block;

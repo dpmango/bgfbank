@@ -200,7 +200,7 @@ $UTM= $_GET['utm_campaign'];
                 </div>
                 <div class="benefit-card__content">
                   <div class="benefit-card__title">К заёмщику</div>
-                  <span class="benefit-card__description">Возраст не&nbsp;менее 18&nbsp;лет на&nbsp;момент обращения за&nbsp;кредитом, не&nbsp;более 65&nbsp;лет на&nbsp;момент окончания срока действия кредита Гражданство&nbsp;РФ</span>
+                  <span class="benefit-card__description">Возраст не&nbsp;менее 18&nbsp;лет на&nbsp;момент обращения за&nbsp;кредитом, не&nbsp;более 65&nbsp;лет на&nbsp;момент окончания срока действия кредита <br/><br/>Гражданство&nbsp;РФ</span>
                 </div>
               </div>
             </div>
@@ -214,7 +214,7 @@ $UTM= $_GET['utm_campaign'];
                 </div>
                 <div class="benefit-card__content">
                   <div class="benefit-card__title"> К недвижимости</div>
-                  <span class="benefit-card__description">Квартира, апартаменты, таунхаусы. Москва, Санкт-Петербург в&nbsp;пределах 100&nbsp;км, в&nbsp;пределах 5&nbsp;км от&nbsp;иных городов присутствия Банка. <br/>Нежилые помещения различного назначения (торговые, офисные, ПСН, кроме складов, гаражей, производственных помещений), расположенные в&nbsp;капитальных строениях.</span>
+                  <span class="benefit-card__description">Квартира, апартаменты, таунхаусы. Москва, Санкт-Петербург в&nbsp;пределах 100&nbsp;км, в&nbsp;пределах 5&nbsp;км от&nbsp;иных городов присутствия Банка. <br/><br/>Нежилые помещения различного назначения (торговые, офисные, ПСН, кроме складов, гаражей, производственных помещений), расположенные в&nbsp;капитальных строениях.</span>
                 </div>
               </div>
             </div>
