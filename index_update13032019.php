@@ -218,20 +218,6 @@ $UTM= $_GET['utm_campaign'];
                 </div>
               </div>
             </div>
-            <!-- col -->
-            <div class="benefits__col">
-              <div class="benefit-card">
-                <div class="benefit-card__icon">
-                  <svg class="ico ico-mono-benefit-icon-team">
-                    <use xlink:href="img/sprite.svg#ico-mono-benefit-icon-team"></use>
-                  </svg>
-                </div>
-                <div class="benefit-card__content">
-                  <div class="benefit-card__title benefit-card__title--big"><span>25</span> лет на рынке</div>
-                  <span class="benefit-card__description">Надежный банк. <br/> Работаем с&nbsp;1994 года</span>
-                </div>
-              </div>
-            </div>
           </div>
         </container>
       </section>
