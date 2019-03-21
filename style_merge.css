@@ -6,6 +6,7 @@
   padding-right: 16px;
   margin-left: auto;
   margin-right: auto;
+  box-sizing: border-box;
 }
 
 @media (min-width: 480px){
@@ -15,17 +16,74 @@
   }
 }
 
+.h3-title{
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.h3-title strong{
+  font-weight: 600;
+}
+
+@media (min-width: 768px){
+  .h3-title{
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 1024px){
+  .h3-title{
+    font-size: 32px;
+  }
+}
+
+/* SVG SPRITE */
+.ico{
+  display: inline-block;
+  fill: currentColor;
+}
+.ico-mono-benefit-icon-calendar {
+  width: 1em;
+  height: 1em;
+}
+.ico-mono-benefit-icon-contract {
+  width: 1em;
+  height: 1em;
+}
+.ico-mono-benefit-icon-guard {
+  width: 0.78em;
+  height: 1em;
+}
+.ico-mono-benefit-icon-home {
+  width: 0.99em;
+  height: 1em;
+}
+.ico-mono-benefit-icon-security {
+  width: 1em;
+  height: 1em;
+}
+.ico-mono-benefit-icon-team {
+  width: 1.36em;
+  height: 1em;
+}
+
+
 
 /* BENEFITS */
 .benefits{
-
+  padding: 15px 0 30px;
 }
 .benefits *{
   box-sizing: border-box;
 }
 
+.benefits .h3-title{
+  text-align: center;
+  margin: 1.5em 0;
+}
 .benefits__wrapper{
-  padding: 30px 0 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,6 +91,7 @@
       flex-wrap: wrap;
   margin-left: -16px;
   margin-right: -16px;
+  margin-top: -20px;
 }
 
 .benefits__col{
@@ -52,19 +111,22 @@
           flex-direction: column;
   padding-left: 16px;
   padding-right: 16px;
-  margin-bottom: 75px;
+  margin-top: 20px;
 }
 
 @media (min-width: 480px){
-  .benefits__wrapper{
-    padding: 50px 0 0px;
+  .benefits{
+    padding: 25px 0 50px;
   }
 }
 
 
 @media (min-width: 768px){
-  .benefits__wrapper{
-    padding: 70px 0 25px;
+  .benefits{
+    padding: 25px 0 70px;
+  }
+  .benefits .h3-title{
+    text-align: left;
   }
   .benefits__col{
     -ms-flex-preferred-size: 50%;
@@ -74,30 +136,81 @@
 }
 
 @media (min-width: 1024px){
-  .benefits__wrapper{
-    padding: 100px 0 25px;
+  .benefits{
+    padding: 50px 0 100px;
   }
+  .benefits__wrapper{
+    margin-top: -40px;
+  }
+
   .benefits__col{
     -ms-flex-preferred-size: 33.3333%;
         flex-basis: 33.3333%;
     max-width: 33.3333%;
+    margin-top: 40px;
   }
 }
 
-
+/* card */
 .benefit-card{
   -webkit-box-flex: 1;
       -ms-flex: 1 0 auto;
           flex: 1 0 auto;
   min-height: 0;
   min-width: 1px;
+  width: 100%;
+  max-width: 380px;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   padding: 50px 26px 20px;
   border: 1px solid #eaeaea;
-  border-radius: 6px;
+  border-radius: 8px;
+  transition: box-shadow .3s ease-in-out;
 }
+.benefit-card--icon-offset{
+  margin-top: 30px;
+}
+
+@media (min-width: 768px){
+  .benefit-card{
+    max-width: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media (min-width: 1024px){
+  .benefit-card--icon-offset{
+    margin-top: 35px;
+  }
+}
+.benefit-card:hover{
+  box-shadow: 0px 5px 10px 0px rgba(0,0,0,.06);
+}
+
 .benefit-card__icon{
+  position: relative;
+  font-size: 0;
+  color: #28b377;
+  transform: translateY(-20px);
+}
+/* green line at the right */
+.benefit-card__icon::before{
+  display: inline-block;
+  content: ' ';
   position: absolute;
+  z-index: 2;
+  left: -27px;
+  width: 2px;
+  background: #28b377;
+  top: 0;
+  bottom: 0;
+  pointer-events: none;
+}
+
+/* circle container to create gap in border */
+.benefit-card__icon-container{
+  text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -107,35 +220,87 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
-  font-size: 0;
   width: 64px;
   height: 64px;
-  top: -32px;
-  left: 26px;
   border-radius: 50%;
   border: 1px solid #28b377;
 }
-.benefit-card__icon img, .benefit-card__icon svg{
-  max-width: 30px;
+
+/* icon modifier holder with 50% radius */
+.benefit-card__icon--circle{
+  position: absolute;
+  z-index: 1;
+  overflow: hidden;
+  top: -32px;
+  left: 16px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background: white;
+  transform: none;
 }
+
+/* icon modifiers and sizings */
+.benefit-card__icon .ico{
+  font-size: 54px;
+}
+.benefit-card__icon--circle .ico{
+  font-size: 32px;
+}
+
+.benefit-card__icon .ico-mono-benefit-icon-guard{
+  font-size: 62px;
+}
+.benefit-card__icon--circle .ico-mono-benefit-icon-contract{
+  margin-right: -8px;
+}
+.benefit-card__icon--circle .ico-mono-benefit-icon-calendar{
+  margin-right: -5px;
+}
+
+/* fallback */
+.benefit-card__icon img{
+  max-width: 75%;
+}
+
 .benefit-card__content{
 
 }
+
 .benefit-card__title{
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
+}
+.benefit-card__title--big{
+  font-size: 20px;
+  margin-top: -5px;
+}
+.benefit-card__title--big span{
+  font-size: 32px;
 }
 .benefit-card__description{
   display: inline-block;
   margin-top: 20px;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.714;
   color: #555555;
 }
 
+@media (min-width: 1024px){
+  .benefit-card__title{
+    font-size: 18px;
+  }
+  .benefit-card__title--big{
+    font-size: 24px;
+  }
+  .benefit-card__title--big span{
+    font-size: 42px;
+  }
+  .benefit-card__description{
+    font-size: 14px;
+  }
+}
 
-/* form */
+/* form disabled button */
 .form__send[disabled]{
   background: #282828;
   opacity: 0.6;

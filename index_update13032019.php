@@ -87,49 +87,66 @@ $UTM= $_GET['utm_campaign'];
       <!-- BENEFITS SECTION :: START -->
       <section class="benefits" id="benefits">
         <div class="container">
+          <h3 class="h3-title">Преимущества Банка <strong>ЖИЛФИНАНС<strong></h3>
           <div class="benefits__wrapper">
             <!-- col -->
             <div class="benefits__col">
-              <div class="benefit-card">
-                <div class="benefit-card__icon">
-                  <img src='img/benefit-icon-1.svg' alt="" />
+              <div class="benefit-card benefit-card--icon-offset">
+                <div class="benefit-card__icon benefit-card__icon--circle">
+                  <div class="benefit-card__icon-container">
+                    <svg class="ico ico-mono-benefit-icon-contract">
+                      <use xlink:href="img/sprite.svg#ico-mono-benefit-icon-contract"></use>
+                    </svg>
+                  </div>
                 </div>
                 <div class="benefit-card__content">
                   <div class="benefit-card__title">Быстрое одобрение</div>
-                  <span class="benefit-card__description">Решение по кредиту вы узнаете в день подачи заявки.</span>
+                  <span class="benefit-card__description">Решение по&nbsp;кредиту вы&nbsp;узнаете в&nbsp;день подачи заявки.</span>
                 </div>
               </div>
             </div>
             <!-- col -->
             <div class="benefits__col">
-              <div class="benefit-card">
-                <div class="benefit-card__icon">
-                  <img src='img/benefit-icon-1.svg' alt="" />
+              <div class="benefit-card benefit-card--icon-offset">
+                <div class="benefit-card__icon benefit-card__icon--circle">
+                  <div class="benefit-card__icon-container">
+                    <svg class="ico ico-mono-benefit-icon-security">
+                      <use xlink:href="img/sprite.svg#ico-mono-benefit-icon-security"></use>
+                    </svg>
+                  </div>
                 </div>
                 <div class="benefit-card__content">
                   <div class="benefit-card__title">Всего 2-м документам</div>
-                  <span class="benefit-card__description">Для оформления кредита нужен паспорт гражданина РФ и СНИЛС/водительское удостоверение</span>
+                  <span class="benefit-card__description">Для оформления кредита нужен паспорт гражданина&nbsp;РФ и&nbsp;СНИЛС/водительское удостоверение</span>
                 </div>
               </div>
             </div>
             <!-- col -->
             <div class="benefits__col">
-              <div class="benefit-card">
-                <div class="benefit-card__icon">
-                  <img src='img/benefit-icon-1.svg' alt="" />
+              <div class="benefit-card benefit-card--icon-offset">
+                <div class="benefit-card__icon benefit-card__icon--circle">
+                  <div class="benefit-card__icon-container">
+                    <svg class="ico ico-mono-benefit-icon-calendar">
+                      <use xlink:href="img/sprite.svg#ico-mono-benefit-icon-calendar"></use>
+                    </svg>
+                  </div>
                 </div>
                 <div class="benefit-card__content">
-                  <div class="benefit-card__title">Лояльное отношение к кредитной истории</div>
-                  <span class="benefit-card__description">Выдаем кредиты заемщикам с любой кредитной историей</span>
+                  <div class="benefit-card__title">Лояльное отношение к&nbsp;кредитной истории</div>
+                  <span class="benefit-card__description">Выдаем кредиты заемщикам с&nbsp;любой кредитной историей</span>
                 </div>
               </div>
             </div>
 
             <!-- col -->
             <div class="benefits__col">
-              <div class="benefit-card">
-                <div class="benefit-card__icon">
-                  <img src='img/benefit-icon-1.svg' alt="" />
+              <div class="benefit-card benefit-card--icon-offset">
+                <div class="benefit-card__icon benefit-card__icon--circle">
+                  <div class="benefit-card__icon-container">
+                    <svg class="ico ico-mono-benefit-icon-contract">
+                      <use xlink:href="img/sprite.svg#ico-mono-benefit-icon-contract"></use>
+                    </svg>
+                  </div>
                 </div>
                 <div class="benefit-card__content">
                   <div class="benefit-card__title">Любые способы подтверждения дохода</div>
@@ -139,13 +156,51 @@ $UTM= $_GET['utm_campaign'];
             </div>
             <!-- col -->
             <div class="benefits__col">
-              <div class="benefit-card">
-                <div class="benefit-card__icon">
-                  <img src='img/benefit-icon-1.svg' alt="" />
+              <div class="benefit-card benefit-card--icon-offset">
+                <div class="benefit-card__icon benefit-card__icon--circle">
+                  <div class="benefit-card__icon-container">
+                    <svg class="ico ico-mono-benefit-icon-security">
+                      <use xlink:href="img/sprite.svg#ico-mono-benefit-icon-security"></use>
+                    </svg>
+                  </div>
                 </div>
                 <div class="benefit-card__content">
-                  <div class="benefit-card__title">Недвижимость остается в собственности</div>
-                  <span class="benefit-card__description">Для вас ничего не меняется, недвижимость остается у владельца.  </span>
+                  <div class="benefit-card__title">Недвижимость остается в&nbsp;собственности</div>
+                  <span class="benefit-card__description">Для вас ничего не&nbsp;меняется, недвижимость остается у&nbsp;владельца.  </span>
+                </div>
+              </div>
+            </div>
+            <!-- col -->
+            <div class="benefits__col">
+              <div class="benefit-card benefit-card--icon-offset">
+                <div class="benefit-card__icon benefit-card__icon--circle">
+                  <div class="benefit-card__icon-container">
+                    <svg class="ico ico-mono-benefit-icon-calendar">
+                      <use xlink:href="img/sprite.svg#ico-mono-benefit-icon-calendar"></use>
+                    </svg>
+                  </div>
+                </div>
+                <div class="benefit-card__content">
+                  <div class="benefit-card__title">До&nbsp;20&nbsp;млн руб со&nbsp;ставкой от&nbsp;11%</div>
+                  <span class="benefit-card__description">Кредит на&nbsp;покупку дома, земли, новостройку без первого взноса, ремонт, развитие бизнеса и&nbsp;любые другие цели. Ставка рассчитывается индивидуально.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <h3 class="h3-title"><strong>Требования</strong> к&nbsp;заёмщику и&nbsp;залогу</h3>
+          <div class="benefits__wrapper">
+            <!-- col -->
+            <div class="benefits__col">
+              <div class="benefit-card">
+                <div class="benefit-card__icon">
+                  <svg class="ico ico-mono-benefit-icon-guard">
+                    <use xlink:href="img/sprite.svg#ico-mono-benefit-icon-guard"></use>
+                  </svg>
+                </div>
+                <div class="benefit-card__content">
+                  <div class="benefit-card__title">К заёмщику</div>
+                  <span class="benefit-card__description">Возраст не&nbsp;менее 18&nbsp;лет на&nbsp;момент обращения за&nbsp;кредитом, не&nbsp;более 65&nbsp;лет на&nbsp;момент окончания срока действия кредита Гражданство&nbsp;РФ</span>
                 </div>
               </div>
             </div>
@@ -153,11 +208,27 @@ $UTM= $_GET['utm_campaign'];
             <div class="benefits__col">
               <div class="benefit-card">
                 <div class="benefit-card__icon">
-                  <img src='img/benefit-icon-1.svg' alt="" />
+                  <svg class="ico ico-mono-benefit-icon-home">
+                    <use xlink:href="img/sprite.svg#ico-mono-benefit-icon-home"></use>
+                  </svg>
                 </div>
                 <div class="benefit-card__content">
-                  <div class="benefit-card__title">До 20 млн руб со ставкой от 11%</div>
-                  <span class="benefit-card__description">Кредит на покупку дома, земли, новостройку без первого взноса, ремонт, развитие бизнеса и любые другие цели. Ставка рассчитывается индивидуально.</span>
+                  <div class="benefit-card__title"> К недвижимости</div>
+                  <span class="benefit-card__description">Квартира, апартаменты, таунхаусы. Москва, Санкт-Петербург в&nbsp;пределах 100&nbsp;км, в&nbsp;пределах 5&nbsp;км от&nbsp;иных городов присутствия Банка. <br/>Нежилые помещения различного назначения (торговые, офисные, ПСН, кроме складов, гаражей, производственных помещений), расположенные в&nbsp;капитальных строениях.</span>
+                </div>
+              </div>
+            </div>
+            <!-- col -->
+            <div class="benefits__col">
+              <div class="benefit-card">
+                <div class="benefit-card__icon">
+                  <svg class="ico ico-mono-benefit-icon-team">
+                    <use xlink:href="img/sprite.svg#ico-mono-benefit-icon-team"></use>
+                  </svg>
+                </div>
+                <div class="benefit-card__content">
+                  <div class="benefit-card__title benefit-card__title--big"><span>25</span> лет на рынке</div>
+                  <span class="benefit-card__description">Надежный банк. <br/> Работаем с&nbsp;1994 года</span>
                 </div>
               </div>
             </div>
