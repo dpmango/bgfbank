@@ -1,0 +1,150 @@
+/* GENERAL LAYOUT */
+.container{
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 480px){
+  .container{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+
+/* BENEFITS */
+.benefits{
+
+}
+.benefits *{
+  box-sizing: border-box;
+}
+
+.benefits__wrapper{
+  padding: 30px 0 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-left: -16px;
+  margin-right: -16px;
+}
+
+.benefits__col{
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
+  min-width: 1px;
+  min-height: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-bottom: 75px;
+}
+
+@media (min-width: 480px){
+  .benefits__wrapper{
+    padding: 50px 0 0px;
+  }
+}
+
+
+@media (min-width: 768px){
+  .benefits__wrapper{
+    padding: 70px 0 25px;
+  }
+  .benefits__col{
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 50%;
+  }
+}
+
+@media (min-width: 1024px){
+  .benefits__wrapper{
+    padding: 100px 0 25px;
+  }
+  .benefits__col{
+    -ms-flex-preferred-size: 33.3333%;
+        flex-basis: 33.3333%;
+    max-width: 33.3333%;
+  }
+}
+
+
+.benefit-card{
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+  min-height: 0;
+  min-width: 1px;
+  position: relative;
+  padding: 50px 26px 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 6px;
+}
+.benefit-card__icon{
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  font-size: 0;
+  width: 64px;
+  height: 64px;
+  top: -32px;
+  left: 26px;
+  border-radius: 50%;
+  border: 1px solid #28b377;
+}
+.benefit-card__icon img, .benefit-card__icon svg{
+  max-width: 30px;
+}
+.benefit-card__content{
+
+}
+.benefit-card__title{
+  font-size: 18px;
+  font-weight: 600;
+}
+.benefit-card__description{
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.714;
+  color: #555555;
+}
+
+
+/* form */
+.form__send[disabled]{
+  background: #282828;
+  opacity: 0.6;
+  pointer-events: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.form__send[disabled]::after{
+  visibility: hidden;
+}

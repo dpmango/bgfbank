@@ -9620,7 +9620,7 @@ $.fn.validation = function () {
 	$(document).ready(function() {
 		var forms = $('.validationControls');
 		for(j=0; j<forms.length; j++){
-			var form = $(forms[j]);		
+			var form = $(forms[j]);
 			var submitBtn = form.find(form.data('submitSelector'));
 			var inputs = form.find('[data-val-test]');
 			inputs.each(function(i){
@@ -9658,81 +9658,80 @@ $("#click2").click(function() {
 	$('#phone1').focus();
 	return false;
 });
-	
+
 $("#b2").click(function() {
-	
+
 		if ($('#phone1').val()==""){
 			//alert("введите телефон");
 			$('#phone1').focus();
 		} else if ($('#name--11').val()==""){
 			$('#name--11').focus();
-			
+
 		} else if ($('#name2--11').val()==""){
 			$('#name2--11').focus();
-			
+
 		} else if ($('#mail--11').val()==""){
 			$('#mail--11').focus();
-			
-			
+
+
 		} else {
 			/*$('#phone1').unmask();
 			$('#phone1').prop('readonly', true);*/
-			
+
 			$.ajax({
-				type: "POST", 
-				url: "php/sms.php?km=1", 
-				data: $("#form--11").serialize()+"&code="+$("#smscode").val(), 
+				type: "POST",
+				url: "php/sms.php?km=1",
+				data: $("#form--11").serialize()+"&code="+$("#smscode").val(),
 				success: function(html){
 					$('.modal--call3').addClass('show');
 					//$('#ask').val(html);
 				}
 			});
-				
-			
-			
+
+
+
 		}
 		return false;
 });
 
-
+// click sms confirmation code
 $("#b1").click(function() {
-	
+		var $btn = $(this);
+
 		if ($("#smscode").val()==""){
 			$('#smscode').focus();
 			return false;
 		} else {
-			
+
+			$btn.prop('disabled', true);
 			$.ajax({
-				type: "POST", 
-				url: "php/sms.php", 
-				data: $("#form--11").serialize()+"&code="+$("#smscode").val(), 
+				type: "POST",
+				url: "php/sms.php",
+				data: $("#form--11").serialize()+"&code="+$("#smscode").val(),
 				success: function(html)
 				{
-					
+
 					if (html=="1"){
 
-						
+
 						$("#proverka").val("1");
 						$('#phone1').css('background', "#46b281");
 						$('#phone1').css('background', "#46b281");
 						/*$('.modal--call3').removeClass('show');
 						$("#b2").hide();
 						$("#sb1").show();*/
-						
+
 						var thx = 1;
 						thx = $("#form--11").attr('thx');
 						ajax($("#form--11").data('form'), thx);
-						
-						
 
-						
 					} else {
 						$("#proverka").val("0");
 						var thx = 1;
 						thx = $("#form--11").attr('thx');
 						ajax($("#form--11").data('form'), thx);
-						
-						
+
+
 						/*
 						$('#smscode').focus();
 						$('#smscode').css('background', "red");
@@ -9742,36 +9741,33 @@ $("#b1").click(function() {
 						$("#b2").hide();
 						$("#sb1").show();
 						*/
-						
+
 					}
-					
-					
-					
-					
-					
-					
-					
+
+					// reset button state
+					$btn.prop('disabled', false);
+
 					return false;
-					
+
 				}
-			}); 
-			
-			
+			});
+
+
 		}
-		
-		
-		
+
+
+
 		/*
-		
+
 		$('#phone1').css('background', "#46b281");
-		
-		
+
+
 		$('.modal--call3').removeClass('show');
 		$("#b2").hide();
 		$("#sb1").show();
 		*/
-		
-		
+
+
 		return false;
 });
 
@@ -9782,22 +9778,22 @@ var ajax = function (number, thx){
   var msg = $('#form--' + number).serialize();
   $.ajax({type:'POST', url:'php/send.php', data:msg,
     success:function(data){
-		
-		
-		
+
+
+
 		/*$('.modal--call3').addClass('show');
 		return false;
 		*/
-		
-		
-		
+
+
+
       // $.closeModal();
       // $('.modal').removeClass('show')
       // $('.modal--thx').addClass('show')
       $('.modal--thx .modal__thx__result').html(data);
       if(thx == '3'){
         $('.modal--thx').addClass('modal--thx--calc');
-        
+
 		var _tel 		= $('#form--' + number).find('.form__input--tel').val()
 		var _email 		= $('#form--' + number).find('.form__input--mail').val()
 		var _name 		= $('#form--' + number).find('.form__input--name').val()
@@ -9805,7 +9801,7 @@ var ajax = function (number, thx){
 		var _city 		= $('.form__item--opt2').find('.form__select--opt').val()
 		var _amount 	= $('.calc__res__val--1').text().replace(/\s/g, '')
 		var _term		= $('.calc__res__val--3').text()
-		
+
       }else{
         $('.modal--thx').removeClass('modal--thx--calc');
       }
@@ -9826,13 +9822,13 @@ var ajax = function (number, thx){
 			for (var propName in props) element[propName] = props[propName];
 			return element;
 			}
- 
+
 		function submit(link, props) {
 		var form = buildElement('form', {
 		method: 'post',
 		action: link
 		});
-  
+
 		for (var propName in props) form.appendChild(
 		buildElement('input', {
 		type: 'hidden',
@@ -9840,12 +9836,12 @@ var ajax = function (number, thx){
 		value: props[propName]
 		})
 		);
-	
+
 	form.style.display = 'none';
 	document.body.appendChild(form);
 	form.submit();
 }
-   
+
 	submit('https://b2c.bgfbank.ru/b2cWeb/registration.htm', {
     utm_source	: 'bgfbank.ipoteka',
     phone		: _tel,
@@ -9856,7 +9852,7 @@ var ajax = function (number, thx){
 	amount		: _amount + '.00',
 	term		: _term,
   });
-        }  
+        }
       },5700);
       $('#form--' + number).find('.form__send').removeClass('sending').prop('disabled', false)
       // window.location.href = 'img/SuperDecorColors.pdf';
@@ -9864,14 +9860,8 @@ var ajax = function (number, thx){
       // if(number == 1)
       //   $('.modal--call__download')[0].click()
     },error:function(xhr,str){alert('Возникла ошибка!')}
-	
-	
 
-	
-	
-	
-	
-	
+
   });
 }
 
@@ -10337,7 +10327,7 @@ window.addEventListener('load',function(){
 // //     if(multi[0]){
 // //       ab_title=multi[0].val;
 // //       var target = $('.multi'); //элемент для подмены
-// //       target.html(ab_title); 
+// //       target.html(ab_title);
 // //     }
 // //   }
 // // });
@@ -18626,7 +18616,7 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 
 	var self = this;
 	self.version = function () { return '1.9.3'; };
-	
+
 	// default options
 	self.options = {
 		useEasing: true, // toggle easing
@@ -18718,12 +18708,12 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 		return (typeof n === 'number' && !isNaN(n));
 	}
 
-	self.initialize = function() { 
+	self.initialize = function() {
 		if (self.initialized) return true;
-		
+
 		self.error = '';
 		self.d = (typeof target === 'string') ? document.getElementById(target) : target;
-		if (!self.d) { 
+		if (!self.d) {
 			self.error = '[CountUp] target is null or undefined'
 			return false;
 		}
@@ -18905,24 +18895,24 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
 
     var touch = event.originalEvent.changedTouches[0],
         simulatedEvent = document.createEvent('MouseEvents');
-    
+
     // Initialize the simulated mouse event using the touch event's coordinates
     simulatedEvent.initMouseEvent(
       simulatedType,    // type
-      true,             // bubbles                    
-      true,             // cancelable                 
-      window,           // view                       
-      1,                // detail                     
-      touch.screenX,    // screenX                    
-      touch.screenY,    // screenY                    
-      touch.clientX,    // clientX                    
-      touch.clientY,    // clientY                    
-      false,            // ctrlKey                    
-      false,            // altKey                     
-      false,            // shiftKey                   
-      false,            // metaKey                    
-      0,                // button                     
-      null              // relatedTarget              
+      true,             // bubbles
+      true,             // cancelable
+      window,           // view
+      1,                // detail
+      touch.screenX,    // screenX
+      touch.screenY,    // screenY
+      touch.clientX,    // clientX
+      touch.clientY,    // clientY
+      false,            // ctrlKey
+      false,            // altKey
+      false,            // shiftKey
+      false,            // metaKey
+      0,                // button
+      null              // relatedTarget
     );
 
     // Dispatch the simulated event to the target element
@@ -19011,7 +19001,7 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
    * original mouse event handling methods.
    */
   mouseProto._mouseInit = function () {
-    
+
     var self = this;
 
     // Delegate the touch handlers to the widget's element
@@ -19029,7 +19019,7 @@ var CountUp = function(target, startVal, endVal, decimals, duration, options) {
    * Remove the touch event handlers
    */
   mouseProto._mouseDestroy = function () {
-    
+
     var self = this;
 
     // Delegate the touch handlers to the widget's element
@@ -19609,4 +19599,3 @@ $(window).on('load', function(){
   $('body').addClass('load')
   // $('.home__logo__anim').removeClass('anim')
 })
-

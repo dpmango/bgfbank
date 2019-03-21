@@ -14,6 +14,7 @@ $UTM= $_GET['utm_campaign'];
       <meta name="keywords" content="кредит под залог, кредит под залог квартиры, кредит бжф, банк жилищного финансирования">
       <meta name="cmsmagazine" content="b0310fab6d4fa9da69b437d309116bda" />
       <link href="style_new.css" rel="stylesheet">
+      <link href="style_merge.css" rel="stylesheet">
       <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/apple-icon-57x57.png">
       <link rel="apple-touch-icon" sizes="60x60" href="img/favicon/apple-icon-60x60.png">
       <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-icon-72x72.png">
@@ -82,37 +83,89 @@ $UTM= $_GET['utm_campaign'];
             <!--<p class="home__note">Уже одобрено <span class="strong"><span class="home__note__val" id="home__note__val">560</span> заявок</span></p>-->
          </div>
       </section>
-      <section class="svc" id="svc">
-         <div class="svc--in">
-            <h2 class="svc__ttl">Нестандартные кредиты для стандартных идей под залог квартиры <span class="nobr">или апартаментов</span></h2>
-            <ul class="svc__items">
-               <li class="svc__item">
-                  <p class="svc__item__pic"><img class="svc__item__pic__img" src="img/svc-item-pic-1.jpg"></p>
-                  <p class="svc__item__ttl">На развитие<br> бизнеса</p>
-                  <p class="svc__item__sttl">без справок<br> и за один день</p>
-                  <p class="svc__item__btw"><a class="svc__item__bt scrollTo" href="#calc">Получите решение банка онлайн</a></p>
-               </li>
-               <li class="svc__item">
-                  <p class="svc__item__pic"><img class="svc__item__pic__img" src="img/svc-item-pic-6.jpg"></p>
-                  <p class="svc__item__ttl">На ремонт<br> и строительство</p>
-                  <p class="svc__item__sttl">лояльное отношение<br> к кредитной истории</p>
-                  <p class="svc__item__btw"><a class="svc__item__bt scrollTo" href="#calc">Получите решение банка онлайн</a></p>
-               </li>
-               <li class="svc__item">
-                  <p class="svc__item__pic"><img class="svc__item__pic__img" src="img/svc-item-pic-3.jpg"></p>
-                  <p class="svc__item__ttl">На покупку дома<br> и земли</p>
-                  <p class="svc__item__sttl">по 2-м документам</p>
-                  <p class="svc__item__btw"><a class="svc__item__bt scrollTo" href="#calc">Получите решение банка онлайн</a></p>
-               </li>
-               <li class="svc__item">
-                  <p class="svc__item__pic"><img class="svc__item__pic__img" src="img/svc-item-pic-4.jpg"></p>
-                  <p class="svc__item__ttl">На новостройку<br> без 1-го взноса</p>
-                  <p class="svc__item__sttl">любые способы<br> подтверждения дохода</p>
-                  <p class="svc__item__btw"><a class="svc__item__bt scrollTo" href="#calc">Получите решение банка онлайн</a></p>
-               </li>
-            </ul>
-         </div>
+
+      <!-- BENEFITS SECTION :: START -->
+      <section class="benefits" id="benefits">
+        <div class="container">
+          <div class="benefits__wrapper">
+            <!-- col -->
+            <div class="benefits__col">
+              <div class="benefit-card">
+                <div class="benefit-card__icon">
+                  <img src='img/benefit-icon-1.svg' alt="" />
+                </div>
+                <div class="benefit-card__content">
+                  <div class="benefit-card__title">Быстрое одобрение</div>
+                  <span class="benefit-card__description">Решение по кредиту вы узнаете в день подачи заявки.</span>
+                </div>
+              </div>
+            </div>
+            <!-- col -->
+            <div class="benefits__col">
+              <div class="benefit-card">
+                <div class="benefit-card__icon">
+                  <img src='img/benefit-icon-1.svg' alt="" />
+                </div>
+                <div class="benefit-card__content">
+                  <div class="benefit-card__title">Всего 2-м документам</div>
+                  <span class="benefit-card__description">Для оформления кредита нужен паспорт гражданина РФ и СНИЛС/водительское удостоверение</span>
+                </div>
+              </div>
+            </div>
+            <!-- col -->
+            <div class="benefits__col">
+              <div class="benefit-card">
+                <div class="benefit-card__icon">
+                  <img src='img/benefit-icon-1.svg' alt="" />
+                </div>
+                <div class="benefit-card__content">
+                  <div class="benefit-card__title">Лояльное отношение к кредитной истории</div>
+                  <span class="benefit-card__description">Выдаем кредиты заемщикам с любой кредитной историей</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- col -->
+            <div class="benefits__col">
+              <div class="benefit-card">
+                <div class="benefit-card__icon">
+                  <img src='img/benefit-icon-1.svg' alt="" />
+                </div>
+                <div class="benefit-card__content">
+                  <div class="benefit-card__title">Любые способы подтверждения дохода</div>
+                  <span class="benefit-card__description">Рассматриваем любые документы, подтверждающий доход.</span>
+                </div>
+              </div>
+            </div>
+            <!-- col -->
+            <div class="benefits__col">
+              <div class="benefit-card">
+                <div class="benefit-card__icon">
+                  <img src='img/benefit-icon-1.svg' alt="" />
+                </div>
+                <div class="benefit-card__content">
+                  <div class="benefit-card__title">Недвижимость остается в собственности</div>
+                  <span class="benefit-card__description">Для вас ничего не меняется, недвижимость остается у владельца.  </span>
+                </div>
+              </div>
+            </div>
+            <!-- col -->
+            <div class="benefits__col">
+              <div class="benefit-card">
+                <div class="benefit-card__icon">
+                  <img src='img/benefit-icon-1.svg' alt="" />
+                </div>
+                <div class="benefit-card__content">
+                  <div class="benefit-card__title">До 20 млн руб со ставкой от 11%</div>
+                  <span class="benefit-card__description">Кредит на покупку дома, земли, новостройку без первого взноса, ремонт, развитие бизнеса и любые другие цели. Ставка рассчитывается индивидуально.</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </container>
       </section>
+      <!-- BENEFITS SECTION :: END -->
+
       <section class="calc" id="calc">
          <div class="calc--in">
             <h2 class="calc__ttl">Не откладывайте <span class="nobr">жизнь на потом.</span><br><span class="nobr">Получите решение </span> <span class="nobr">уже сегодня</span></h2>
