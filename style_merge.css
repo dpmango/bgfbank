@@ -133,6 +133,11 @@
         flex-basis: 50%;
     max-width: 50%;
   }
+  .benefits__col--100{
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%;
+  }
 }
 
 @media (min-width: 1024px){
@@ -144,10 +149,15 @@
   }
 
   .benefits__col{
-    -ms-flex-preferred-size: 33.3333%;
-        flex-basis: 33.3333%;
-    max-width: 33.3333%;
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    max-width: 50%;
     margin-top: 40px;
+  }
+  .benefits__col--100{
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    max-width: 100%;
   }
 }
 
@@ -159,19 +169,18 @@
   min-height: 0;
   min-width: 1px;
   width: 100%;
-  max-width: 380px;
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  align-items: flex-start;
   position: relative;
-  padding: 50px 26px 20px;
-  border: 1px solid #eaeaea;
-  border-radius: 8px;
-  transition: box-shadow .3s ease-in-out;
 }
-.benefit-card--icon-offset{
-  margin-top: 30px;
+.benefit-card--wrap{
+  flex-wrap: wrap;
 }
-
+.benefit-card--wrap .benefit-card__content{
+  flex-basis: 100%;
+  width: 100%;
+  margin-left: 0px;
+}
 @media (min-width: 768px){
   .benefit-card{
     max-width: auto;
@@ -180,22 +189,25 @@
   }
 }
 @media (min-width: 1024px){
-  .benefit-card--icon-offset{
-    margin-top: 35px;
-  }
-}
-.benefit-card:hover{
-  box-shadow: 0px 5px 10px 0px rgba(0,0,0,.06);
+
 }
 
+
 .benefit-card__icon{
+  flex: 0 0 auto;
   position: relative;
   font-size: 0;
-  color: #28b377;
-  transform: translateY(-20px);
 }
-.benefit-card__icon:not(.benefit-card__icon--circle){
-  min-height: 62px;
+.benefit-card__icon .ico{
+  fill: #28b377
+}
+.benefit-card__icon .benefit-card__title{
+  margin-left: 16px;
+  margin-top: .2em;
+}
+
+.benefit-card__icon--border{
+  padding-left: 18px;
   display: -webkit-flex;
   display: -ms-flex;
   display: flex;
@@ -204,12 +216,12 @@
 }
 
 /* green line at the right */
-.benefit-card__icon::before{
+.benefit-card__icon--border::before{
   display: inline-block;
   content: ' ';
   position: absolute;
   z-index: 2;
-  left: -27px;
+  left: 0px;
   width: 2px;
   background: #28b377;
   top: 0;
@@ -217,54 +229,18 @@
   pointer-events: none;
 }
 
-/* circle container to create gap in border */
-.benefit-card__icon-container{
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 64px;
-  height: 64px;
-  border-radius: 50%;
-  border: 1px solid #28b377;
-}
-
-/* icon modifier holder with 50% radius */
-.benefit-card__icon--circle{
-  position: absolute;
-  z-index: 1;
-  overflow: hidden;
-  top: -32px;
-  left: 16px;
-  padding-left: 10px;
-  padding-right: 10px;
-  background: white;
-  transform: none;
-}
-
 /* icon modifiers and sizings */
 .benefit-card__icon .ico{
-  font-size: 54px;
+  font-size: 26px;
 }
-.benefit-card__icon--circle .ico{
-  font-size: 32px;
+.benefit-card__icon--border .ico{
+  font-size: 44px;
 }
 
-.benefit-card__icon .ico-mono-benefit-icon-guard{
-  font-size: 62px;
+.benefit-card__icon--border .ico-mono-benefit-icon-guard{
+  font-size: 48px;
 }
-.benefit-card__icon--circle .ico-mono-benefit-icon-contract{
-  margin-right: -8px;
-}
-.benefit-card__icon--circle .ico-mono-benefit-icon-calendar{
-  margin-right: -5px;
-}
+
 
 /* fallback */
 .benefit-card__icon img{
@@ -272,23 +248,20 @@
 }
 
 .benefit-card__content{
-
+  flex: 1 1 auto;
+  margin-top: 4px;
+  margin-left: 20px;
 }
+
 
 .benefit-card__title{
   font-size: 16px;
   font-weight: 600;
 }
-.benefit-card__title--big{
-  font-size: 20px;
-  margin-top: -5px;
-}
-.benefit-card__title--big span{
-  font-size: 32px;
-}
+
 .benefit-card__description{
   display: inline-block;
-  margin-top: 20px;
+  margin-top: 12px;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.714;
@@ -296,6 +269,22 @@
 }
 
 @media (min-width: 1024px){
+
+  .benefit-card__icon--border{
+    padding-left: 26px;
+  }
+  .benefit-card__icon .ico{
+    font-size: 32px;
+  }
+  .benefit-card__icon--border .ico{
+    font-size: 54px;
+  }
+  .benefit-card__icon--border .ico-mono-benefit-icon-guard{
+    font-size: 62px;
+  }
+  .benefit-card__content{
+    margin-top: 7px;
+  }
   .benefit-card__title{
     font-size: 18px;
   }
@@ -306,6 +295,7 @@
     font-size: 42px;
   }
   .benefit-card__description{
+    maring-top: 15px;
     font-size: 14px;
   }
 }
