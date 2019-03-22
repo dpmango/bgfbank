@@ -9659,24 +9659,40 @@ $("#click2").click(function() {
 	return false;
 });
 
+var emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
 $("#b2").click(function() {
+		// store jQuery objects (input elements)
+		var $phone = $('#phone1');
+		var $name = $('#name--11');
+		var $surname = $('#name2--11');
+		var $email = $('#mail--11');
 
-		if ($('#phone1').val()==""){
-			//alert("введите телефон");
-			$('#phone1').focus();
-		} else if ($('#name--11').val()==""){
-			$('#name--11').focus();
+		// step-by-step validation
+		if ($phone.val()==""){
+			$phone.focus();
+			$phone.addClass('has-error');
+		} else if ($name.val()==""){
+			$name.focus();
+			$name.addClass('has-error');
+			resetValidationErrors(2);
 
-		} else if ($('#name2--11').val()==""){
-			$('#name2--11').focus();
+		} else if ($surname.val()==""){
+			$surname.focus();
+			$surname.addClass('has-error');
+			resetValidationErrors(3);
 
-		} else if ($('#mail--11').val()==""){
-			$('#mail--11').focus();
-
+		} else if (emailRegex.test($email.val())){
+			$email.focus();
+			$email.addClass('has-error');
+			resetValidationErrors(4);
 
 		} else {
 			/*$('#phone1').unmask();
 			$('#phone1').prop('readonly', true);*/
+
+			// all valid - reset all errors and do POST request
+			resetValidationErrors(5);
 
 			$.ajax({
 				type: "POST",
@@ -9686,11 +9702,31 @@ $("#b2").click(function() {
 					$('.modal--call3').addClass('show');
 					//$('#ask').val(html);
 				}
+				// TODO - what if POST fails ?
 			});
 
-
-
 		}
+
+		// reset validation errors function
+		function resetValidationErrors(step){
+			if ( step === 2 ){
+				$phone.removeClass('has-error');
+			} else if ( step === 3 ){
+				$phone.removeClass('has-error');
+				$name.removeClass('has-error');
+			} else if ( step === 4 ){
+				$phone.removeClass('has-error');
+				$name.removeClass('has-error');
+				$surname.removeClass('has-error');
+			} else if ( step === 5 ){
+				$phone.removeClass('has-error');
+				$name.removeClass('has-error');
+				$surname.removeClass('has-error');
+				$email.removeClass('has-error');
+			}
+		}
+
+		// TODO - refactor to e.preventDefault() ?
 		return false;
 });
 
