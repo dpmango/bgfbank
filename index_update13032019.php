@@ -179,7 +179,7 @@ $UTM= $_GET['utm_campaign'];
           <h3 class="h3-title"><strong>Требования</strong> к&nbsp;заёмщику и&nbsp;залогу</h3>
           <div class="benefits__wrapper">
             <!-- col -->
-            <div class="benefits__col benefits__col--100">
+            <div class="benefits__col">
               <div class="benefit-card benefit-card--wrap">
                 <div class="benefit-card__icon benefit-card__icon--border">
                   <svg class="ico ico-mono-benefit-icon-guard">
@@ -193,7 +193,7 @@ $UTM= $_GET['utm_campaign'];
               </div>
             </div>
             <!-- col -->
-            <div class="benefits__col benefits__col--100">
+            <div class="benefits__col">
               <div class="benefit-card benefit-card--wrap">
                 <div class="benefit-card__icon benefit-card__icon--border">
                   <svg class="ico ico-mono-benefit-icon-home">
